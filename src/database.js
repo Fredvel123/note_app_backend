@@ -1,11 +1,11 @@
-const { Pool } = require('pg');
+const mongoose  = require('mongoose');
 
-const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  password: '',
-  database: 'firstapi',
-  port: '5432'
-})
+const URI = 'mongodb://localhost:27017/notes_db';
+const config = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}
 
-module.exports = pool;
+mongoose.connect(URI, config)
+  .then(db => console.log('the database is connected'))
+  .catch(err => console.log(err))
