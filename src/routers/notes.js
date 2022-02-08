@@ -3,11 +3,11 @@ const { addNewNotes, allNotes, removeNotes, getNotesByUser, getNoteById, updateN
 const { verifyToken } = require('../controllers/users');
 
 router.post('/add', verifyToken, addNewNotes);
-router.put('/update/:id', updateNote);
-router.get('/all', allNotes);
-router.get('/:id', getNoteById);
-router.get('/user/:id', getNotesByUser);
-router.delete('/remove/:id', removeNotes);
+router.put('/update/:id', verifyToken, updateNote);
+router.get('/all', verifyToken, allNotes);
+router.get('/:id', verifyToken, getNoteById);
+router.get('/user/:id', verifyToken, getNotesByUser);
+router.delete('/remove/:id', verifyToken, removeNotes);
 
 
 module.exports = router;

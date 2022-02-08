@@ -32,20 +32,20 @@ Link: https://notes-app-fredd.herokuapp.com/api/notes/add (token)
 
 ### All Notes
 
-Link: https://notes-app-fredd.herokuapp.com/api/notes/add (No-token)
+Link: https://notes-app-fredd.herokuapp.com/api/notes/add (token)
 
 ### Update Note
  
-Link: https://notes-app-fredd.herokuapp.com/api/notes/update/:id
+Link: https://notes-app-fredd.herokuapp.com/api/notes/update/:id (token)
 
 ### Get Note By ID
 
-Link: https://notes-app-fredd.herokuapp.com/api/notes/:id
+Link: https://notes-app-fredd.herokuapp.com/api/notes/:id (token)
 
 ### Get Notes by user
 
-Link: https://notes-app-fredd.herokuapp.com/api/notes/user/:id
+Link: https://notes-app-fredd.herokuapp.com/api/notes/user/:id (token)
 
 ### Remove Notes By id
  
-Link: https://notes-app-fredd.herokuapp.com/api/notes/remove/:id
+Link: https://notes-app-fredd.herokuapp.com/api/notes/remove/:id (token)
