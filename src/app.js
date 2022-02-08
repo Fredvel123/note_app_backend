@@ -11,5 +11,8 @@ app.use(cors());
 
 // routers
 app.use('/api/users', require('./routers/users'));
+app.use('/api/notes', require('./routers/notes'));
+
+
 
 module.exports = app;

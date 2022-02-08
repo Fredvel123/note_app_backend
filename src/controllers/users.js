@@ -68,11 +68,10 @@ const verifyToken = async (req, res, next) => {
           message: 'Your Token is not valid'
         })
       } else {
-        req.userId = payload;
+        req.userId = payload.id;
         next();
       }
     })
-    console.log('yes there is token :)');
   }
 }
 
@@ -81,10 +80,12 @@ const getAllUser = async (req, res) => {
   res.json(user);
 }
 
+
 const getUserById = async (req, res) => {
   // const {id} = req.params;
-  const user = await Users.findOne( );
+  const user = await Users.findOne({_id: req.userId}).select('-password');
   res.json(user);
+  // console.log(req.userId);
 }
 
 const removeUserById = async (req, res) => {
