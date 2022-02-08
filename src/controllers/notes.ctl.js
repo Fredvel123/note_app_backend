@@ -20,9 +20,16 @@ const removeNotes = async (req, res) => {
   })
 }
 
+const getNoteById = async (req, res) => {
+  const {id} = req.params;
+  const note = await Notes.findById(id);
+  res.json(note)
+}
+
 const getNotesByUser = async (req, res) => {
-  const notes = await Notes.find({user: req.userId})
-  res.json(notes)
+  const {id} = req.params;
+  const notes = await Notes.find( {user: id} )
+  res.json(notes);
 }
 
 
@@ -30,5 +37,6 @@ module.exports = {
   addNewNotes,
   allNotes,
   removeNotes,
-  getNotesByUser
+  getNotesByUser,
+  getNoteById
 }

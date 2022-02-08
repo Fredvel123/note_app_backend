@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { mongoose, Schema, model } = require('mongoose');
 
 
 const notesSchema = new Schema({
@@ -8,11 +8,10 @@ const notesSchema = new Schema({
   },
   description: {
     type: String,
-    unique: false
+    required: false
   },
   user: {
-    type: String,
-    required: true
+    type: String 
   }
 }, {
   versionKey: false,

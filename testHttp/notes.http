@@ -10,5 +10,7 @@ Content-Type: application/json
 ### 
 DELETE http://localhost:8000/api/notes/remove/6201b19c1e61e56ff1b726f2  HTTP/1.1
 ###
-GET http://localhost:8000/api/notes/user HTTP/1.1
+GET http://localhost:8000/api/notes/user/6201986379cd9e84c4a362dc HTTP/1.1
 access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDE5ODYzNzljZDllODRjNGEzNjJkYyIsImlhdCI6MTY0NDI3MzQyNSwiZXhwIjoxNjQ1NDgzMDI1fQ.JEjeTJXt9ahGPQ-RjfiboTV48v1MCArfcfQQ4sdk0dg
+###
+GET http://localhost:8000/api/notes/6201b52b228cc3c042bde664 HTTP/1.1
