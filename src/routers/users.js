@@ -6,6 +6,6 @@ router.get('/all', verifyToken, getAllUser);
 router.get('/info', verifyToken, getUserById);
 router.post('/signup', createNewUser);
 router.post('/login', logInUser);
-router.delete('/remove/:id', removeUserById);
+router.delete('/remove/:id', verifyToken, removeUserById);
 
 module.exports = router;
