@@ -33,10 +33,20 @@ const getNotesByUser = async (req, res) => {
 }
 
 
+const updateNote = async (req, res) => {
+  const {id} = req.params;
+  const note = await Notes.findByIdAndUpdate(id, req.body);
+  res.json({
+    message: 'the note was created successfully',
+    note: note
+  })
+}
+
 module.exports = {
   addNewNotes,
   allNotes,
   removeNotes,
   getNotesByUser,
-  getNoteById
+  getNoteById,
+  updateNote
 }

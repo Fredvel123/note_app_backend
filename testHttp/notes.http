@@ -7,6 +7,15 @@ Content-Type: application/json
   "description": "this is a test for my api",
   "user": "6201986379cd9e84c4a362dc"
 }
+###
+PUT http://localhost:8000/api/notes/update/6201b540228cc3c042bde668 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "third note update",
+  "description": "this is a test updated for my api",
+  "user": "6201986379cd9e84c4a362dc"
+}
 ### 
 DELETE http://localhost:8000/api/notes/remove/6201b19c1e61e56ff1b726f2  HTTP/1.1
 ###
